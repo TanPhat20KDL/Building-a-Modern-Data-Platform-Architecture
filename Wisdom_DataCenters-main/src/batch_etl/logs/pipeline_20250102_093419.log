@@ -1,0 +1,2 @@
+2025-01-02 16:34:19,139 - src.batch_etl.load.datalake_loader - ERROR - Error initializing zones: [Errno 13] Permission denied: '/user'
+2025-01-02 16:34:19,140 - py4j.clientserver - INFO - Closing down clientserver connection

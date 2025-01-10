@@ -1,0 +1,8 @@
+clickhouse-data/*
+clickhouse-logs/*
+grafana-data/*
+#hadoop/*
+#kafka/*
+#kafka/connectors/*
+#kafka/plugins/*
+logs/*

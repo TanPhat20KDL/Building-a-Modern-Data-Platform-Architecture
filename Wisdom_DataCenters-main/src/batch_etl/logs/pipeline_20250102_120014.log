@@ -1,0 +1,323 @@
+2025-01-02 19:00:14,931 - __main__ - INFO - Starting logistics data pipeline
+User: ponydasierra
+Environment: development
+Start Time (UTC): 2025-01-02 12:00:12.097708
+2025-01-02 19:00:14,931 - __main__ - INFO - Starting data extraction phase
+2025-01-02 19:00:14,931 - __main__ - INFO - Processing table: Orders
+2025-01-02 19:00:14,931 - src.batch_etl.extract.mysql_extractor - INFO - Starting extraction of table Orders
+2025-01-02 19:00:18,174 - src.batch_etl.extract.mysql_extractor - INFO - Completed extraction of Orders:
+Records: 500
+Partitions: 4
+Duration: 2.85 seconds
+2025-01-02 19:00:18,288 - src.batch_etl.load.datalake_loader - INFO - Starting raw zone load for Orders
+2025-01-02 19:00:19,955 - src.batch_etl.load.datalake_loader - INFO - Completed raw zone load for Orders:
+Records: 500
+Partitioning: partitioned by ['created_at_partition', 'status']
+Duration: 1.59 seconds
+Path: /user/thuanpony03/logistics/data/datalake/raw/Orders
+2025-01-02 19:00:19,956 - __main__ - INFO - Completed Orders: 500 records processed in 5.02 seconds
+2025-01-02 19:00:19,956 - __main__ - INFO - Processing table: Shipments
+2025-01-02 19:00:19,956 - src.batch_etl.extract.mysql_extractor - INFO - Starting extraction of table Shipments
+2025-01-02 19:00:20,080 - src.batch_etl.extract.mysql_extractor - INFO - Completed extraction of Shipments:
+Records: 371
+Partitions: 4
+Duration: 0.05 seconds
+2025-01-02 19:00:20,144 - src.batch_etl.load.datalake_loader - INFO - Starting raw zone load for Shipments
+2025-01-02 19:00:21,220 - src.batch_etl.load.datalake_loader - INFO - Completed raw zone load for Shipments:
+Records: 371
+Partitioning: partitioned by ['status']
+Duration: 1.03 seconds
+Path: /user/thuanpony03/logistics/data/datalake/raw/Shipments
+2025-01-02 19:00:21,220 - __main__ - INFO - Completed Shipments: 371 records processed in 1.26 seconds
+2025-01-02 19:00:21,220 - __main__ - INFO - Processing table: Payments
+2025-01-02 19:00:21,220 - src.batch_etl.extract.mysql_extractor - INFO - Starting extraction of table Payments
+2025-01-02 19:00:21,327 - src.batch_etl.extract.mysql_extractor - INFO - Completed extraction of Payments:
+Records: 500
+Partitions: 4
+Duration: 0.04 seconds
+2025-01-02 19:00:21,415 - src.batch_etl.load.datalake_loader - INFO - Starting raw zone load for Payments
+2025-01-02 19:00:22,467 - src.batch_etl.load.datalake_loader - INFO - Completed raw zone load for Payments:
+Records: 500
+Partitioning: partitioned by ['payment_date_partition', 'payment_status']
+Duration: 1.01 seconds
+Path: /user/thuanpony03/logistics/data/datalake/raw/Payments
+2025-01-02 19:00:22,467 - __main__ - INFO - Completed Payments: 500 records processed in 1.25 seconds
+2025-01-02 19:00:22,467 - __main__ - INFO - Processing table: Notifications
+2025-01-02 19:00:22,467 - src.batch_etl.extract.mysql_extractor - INFO - Starting extraction of table Notifications
+2025-01-02 19:00:22,554 - src.batch_etl.extract.mysql_extractor - INFO - Completed extraction of Notifications:
+Records: 371
+Partitions: 4
+Duration: 0.04 seconds
+2025-01-02 19:00:22,599 - src.batch_etl.load.datalake_loader - INFO - Starting raw zone load for Notifications
+2025-01-02 19:00:23,207 - src.batch_etl.load.datalake_loader - INFO - Completed raw zone load for Notifications:
+Records: 371
+Partitioning: partitioned by ['notification_date_partition']
+Duration: 0.57 seconds
+Path: /user/thuanpony03/logistics/data/datalake/raw/Notifications
+2025-01-02 19:00:23,207 - __main__ - INFO - Completed Notifications: 371 records processed in 0.74 seconds
+2025-01-02 19:00:23,207 - __main__ - INFO - Processing table: Users
+2025-01-02 19:00:23,207 - src.batch_etl.extract.mysql_extractor - INFO - Starting extraction of table Users
+2025-01-02 19:00:23,260 - src.batch_etl.extract.mysql_extractor - INFO - Completed extraction of Users:
+Records: 100
+Partitions: 1
+Duration: 0.01 seconds
+2025-01-02 19:00:23,299 - src.batch_etl.load.datalake_loader - INFO - Starting raw zone load for Users
+2025-01-02 19:00:23,831 - src.batch_etl.load.datalake_loader - INFO - Completed raw zone load for Users:
+Records: 100
+Partitioning: not partitioned
+Duration: 0.50 seconds
+Path: /user/thuanpony03/logistics/data/datalake/raw/Users
+2025-01-02 19:00:23,831 - __main__ - INFO - Completed Users: 100 records processed in 0.62 seconds
+2025-01-02 19:00:23,831 - __main__ - INFO - Processing table: Drivers
+2025-01-02 19:00:23,831 - src.batch_etl.extract.mysql_extractor - INFO - Starting extraction of table Drivers
+2025-01-02 19:00:23,885 - src.batch_etl.extract.mysql_extractor - INFO - Completed extraction of Drivers:
+Records: 20
+Partitions: 1
+Duration: 0.01 seconds
+2025-01-02 19:00:23,921 - src.batch_etl.load.datalake_loader - INFO - Starting raw zone load for Drivers
+2025-01-02 19:00:24,477 - src.batch_etl.load.datalake_loader - INFO - Completed raw zone load for Drivers:
+Records: 20
+Partitioning: not partitioned
+Duration: 0.49 seconds
+Path: /user/thuanpony03/logistics/data/datalake/raw/Drivers
+2025-01-02 19:00:24,478 - __main__ - INFO - Completed Drivers: 20 records processed in 0.65 seconds
+2025-01-02 19:00:24,478 - __main__ - INFO - Data extraction phase completed in 9.55 seconds
+2025-01-02 19:00:24,478 - __main__ - INFO - Starting data transformation phase
+2025-01-02 19:00:24,478 - src.batch_etl.transform.transform_executor - INFO - Starting transformation process
+Timestamp: 2024-12-24 09:43:35
+User: thuanpony03
+2025-01-02 19:00:24,478 - src.batch_etl.transform.transform_executor - INFO - Starting dimension transformation at 2024-12-24 09:43:35
+2025-01-02 19:00:24,478 - src.batch_etl.transform.dimension_builder - INFO - Building date dimension from 2024-01-01 to 2024-12-31
+2025-01-02 19:00:24,826 - src.batch_etl.transform.dimension_builder - INFO - Successfully built date dimension with 366 rows
+2025-01-02 19:00:25,086 - src.batch_etl.transform.dimension_builder - INFO - Building user dimension
+2025-01-02 19:00:25,296 - src.batch_etl.transform.dimension_builder - INFO - Successfully built user dimension with 100 rows
+2025-01-02 19:00:25,296 - src.batch_etl.transform.dimension_builder - INFO - Building driver dimension
+2025-01-02 19:00:25,631 - src.batch_etl.transform.dimension_builder - INFO - Successfully built driver dimension with 20 rows
+2025-01-02 19:00:25,645 - src.batch_etl.transform.dimension_builder - INFO - Building location dimension
+2025-01-02 19:00:26,260 - src.batch_etl.transform.dimension_builder - INFO - Successfully built location dimension with 1000 unique addresses
+2025-01-02 19:00:26,532 - src.batch_etl.transform.dimension_builder - INFO - Building payment method dimension
+2025-01-02 19:00:28,359 - src.batch_etl.transform.dimension_builder - INFO - Successfully built payment method dimension with 3 rows
+2025-01-02 19:00:29,990 - src.batch_etl.transform.transform_executor - INFO - Completed dimension transformation with counts:
+date: 366 rows
+user: 100 rows
+driver: 20 rows
+location: 1000 rows
+payment_method: 3 rows
+2025-01-02 19:00:29,990 - src.batch_etl.transform.transform_executor - INFO - Starting fact transformation at 2024-12-24 09:43:35
+2025-01-02 19:00:30,121 - src.batch_etl.transform.fact_builder - INFO - Building orders fact table
+2025-01-02 19:00:31,734 - src.batch_etl.transform.fact_builder - INFO - Successfully built orders fact table with 500 rows
+Time range: Row(min(order_created_at)=datetime.datetime(2025, 1, 1, 17, 55, 28), max(order_created_at)=datetime.datetime(2025, 1, 1, 17, 58, 27))
+2025-01-02 19:00:31,742 - src.batch_etl.transform.fact_builder - INFO - Building shipment tracking fact table
+2025-01-02 19:00:33,280 - src.batch_etl.transform.fact_builder - INFO - Successfully built shipment tracking fact table with 371 rows
+2025-01-02 19:00:37,574 - src.batch_etl.transform.transform_executor - INFO - Completed fact transformation
+Built facts: ['orders', 'shipment_tracking']
+Counts: {'orders': 500, 'shipment_tracking': 371}
+2025-01-02 19:00:37,575 - src.batch_etl.transform.transform_executor - INFO - Saving transformed tables to processed zone
+2025-01-02 19:00:38,102 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for dim_date:
+Records: 366
+Update Type: overwrite
+Duration: 0.50 seconds
+2025-01-02 19:00:38,639 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for dim_user:
+Records: 100
+Update Type: overwrite
+Duration: 0.50 seconds
+2025-01-02 19:00:39,269 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for dim_driver:
+Records: 20
+Update Type: overwrite
+Duration: 0.56 seconds
+2025-01-02 19:00:40,141 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for dim_location:
+Records: 1,000
+Update Type: overwrite
+Duration: 0.68 seconds
+2025-01-02 19:00:43,009 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for dim_payment_method:
+Records: 3
+Update Type: overwrite
+Duration: 1.74 seconds
+2025-01-02 19:00:46,333 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for fact_orders:
+Records: 500
+Update Type: append
+Duration: 2.05 seconds
+2025-01-02 19:00:49,185 - src.batch_etl.load.datalake_loader - INFO - Completed processed zone load for fact_shipment_tracking:
+Records: 371
+Update Type: append
+Duration: 1.46 seconds
+2025-01-02 19:00:49,185 - src.batch_etl.transform.transform_executor - INFO - Successfully saved all transformed tables
+2025-01-02 19:00:49,185 - src.batch_etl.transform.transform_executor - INFO - Completed transformation process
+Duration: 785834.00 seconds
+2025-01-02 19:01:07,731 - src.batch_etl.transform.transform_executor - INFO - Transform metrics generated:
+Duration: 785834.00 seconds
+Dimensions processed: 5
+Facts processed: 2
+Total errors: 0
+2025-01-02 19:01:07,731 - __main__ - INFO - Data transformation phase completed in 43.25 seconds
+2025-01-02 19:01:07,731 - __main__ - INFO - Starting warehouse loading phase
+2025-01-02 19:01:07,749 - src.batch_etl.load.warehouse_loader - INFO - Loading dimension table: dim_date
+2025-01-02 19:01:08,037 - src.batch_etl.load.warehouse_loader - ERROR - Error loading dimension dim_date: An error occurred while calling o768.jdbc.
+: java.sql.SQLSyntaxErrorException: Unknown database 'dw_logistics'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:123)
+	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:119)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:50)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:47)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:104)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:488)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:133)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:856)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:387)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:360)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:247)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:753)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+
+2025-01-02 19:01:08,038 - __main__ - ERROR - Error in warehouse loading phase: An error occurred while calling o768.jdbc.
+: java.sql.SQLSyntaxErrorException: Unknown database 'dw_logistics'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:123)
+	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:119)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:50)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:47)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:104)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:488)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:133)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:856)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:387)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:360)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:247)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:753)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+
+2025-01-02 19:01:08,038 - __main__ - ERROR - Pipeline failed: An error occurred while calling o768.jdbc.
+: java.sql.SQLSyntaxErrorException: Unknown database 'dw_logistics'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:123)
+	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:119)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:50)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:47)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:104)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:512)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:31)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:488)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:133)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:856)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:387)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:360)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:247)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:753)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:750)
+
+2025-01-02 19:01:08,050 - py4j.clientserver - INFO - Closing down clientserver connection

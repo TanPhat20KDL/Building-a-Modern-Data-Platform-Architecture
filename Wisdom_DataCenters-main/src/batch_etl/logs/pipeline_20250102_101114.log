@@ -1,0 +1,2 @@
+2025-01-02 17:11:14,849 - src.batch_etl.load.datalake_loader - ERROR - Error initializing zones: java.net.UnknownHostException: namenode
+2025-01-02 17:11:14,853 - py4j.clientserver - INFO - Closing down clientserver connection
